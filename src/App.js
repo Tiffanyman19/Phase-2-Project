@@ -1,31 +1,23 @@
-import "./App.css";
-import {
-  OneSuite,
-  FourSuite,
-  Home,
-  Klondike,
-  NotFound,
-} from "./components/pages";
-import ScreenSizeWarn from "./components/ScreenSizeWarn";
-import * as ROUTES from "./utils/routes";
-
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <ScreenSizeWarn />
-      <div className="app__gameplay">
-        <Router basename={process.env.PUBLIC_URL}>
-          <Switch>
-            <Home exact path={ROUTES.HOME}></Home>
-            <Klondike path={ROUTES.KLONDIKE}></Klondike>
-            <OneSuite path={ROUTES.ONESUITE}></OneSuite>
-            <FourSuite path={ROUTES.FOURSUITE}></FourSuite>
-            <NotFound path="/"></NotFound>
-          </Switch>
-        </Router>
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
